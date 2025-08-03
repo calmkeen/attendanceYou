@@ -60,23 +60,20 @@ class NavigationBar: UINavigationBar {
     }
     
     func setupConstraints() {
+        
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        let topInset = windowScene?.windows.first?.safeAreaInsets.top ?? 0
         navigationTitle.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.height.equalTo(100 + topInset) // 노치 사이즈를 위한 조정 필요
             make.width.lessThanOrEqualToSuperview().multipliedBy(0.6)
+            make.centerX.equalToSuperview()
         }
         
         navigationButton.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
             make.centerY.equalToSuperview()
             make.width.height.equalTo(24)
-        }
-        
-        snp.makeConstraints { make in
-            let scenes = UIApplication.shared.connectedScenes
-            let windowScene = scenes.first as? UIWindowScene
-            let topInset = windowScene?.windows.first?.safeAreaInsets.top ?? 0
-            make.height.equalTo(44 + topInset)
         }
     }
     
