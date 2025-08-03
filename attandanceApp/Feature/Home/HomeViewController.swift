@@ -29,5 +29,8 @@ class HomeViewController: BaseViewController {
     var classWorkTimelabel = UILabel()
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
 }

@@ -11,8 +11,8 @@ import SnapKit
 class BaseViewController: UIViewController {
     
     var BaseView = UIView()
-    var topnavigationView = UIView()
-    var bottomTabView = UIView()
+    var topnavigationView = NavigationBar()
+    var bottomTabView = BottomTabBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,11 @@ class BaseViewController: UIViewController {
     }
     
     func setupView() {
-        
+        view.addSubview(BaseView)
+        view.addSubview(topnavigationView)
+        view.addSubview(bottomTabView)
     }
 
-    
     func setupLayout() {
         BaseView.snp.makeConstraints{ make in
             make.edges.equalToSuperview()
@@ -39,7 +40,5 @@ class BaseViewController: UIViewController {
             make.horizontalEdges.equalToSuperview()
             make.height.equalTo(UIScreen.main.bounds.height * 0.1)
         }
-        
     }
-    
 }

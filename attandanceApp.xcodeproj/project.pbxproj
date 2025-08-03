@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751C46DB2E3DE6DF00D70746 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 751C46DA2E3DE6DF00D70746 /* LookinServer */; };
+		751C46E02E3DF6DE00D70746 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 751C46DF2E3DF6DE00D70746 /* RxCocoa */; };
+		751C46E22E3DF6DE00D70746 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 751C46E12E3DF6DE00D70746 /* RxRelay */; };
+		751C46E42E3DF6DE00D70746 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 751C46E32E3DF6DE00D70746 /* RxSwift */; };
 		75E221292E23999100080D8D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 75E221282E23999100080D8D /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +73,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751C46E02E3DF6DE00D70746 /* RxCocoa in Frameworks */,
 				75E221292E23999100080D8D /* SnapKit in Frameworks */,
+				751C46E42E3DF6DE00D70746 /* RxSwift in Frameworks */,
+				751C46E22E3DF6DE00D70746 /* RxRelay in Frameworks */,
+				751C46DB2E3DE6DF00D70746 /* LookinServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +139,10 @@
 			name = attandanceApp;
 			packageProductDependencies = (
 				75E221282E23999100080D8D /* SnapKit */,
+				751C46DA2E3DE6DF00D70746 /* LookinServer */,
+				751C46DF2E3DF6DE00D70746 /* RxCocoa */,
+				751C46E12E3DF6DE00D70746 /* RxRelay */,
+				751C46E32E3DF6DE00D70746 /* RxSwift */,
 			);
 			productName = attandanceApp;
 			productReference = 75E220E12E23975700080D8D /* attandanceApp.app */;
@@ -216,6 +228,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				75E221272E23999100080D8D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				751C46D92E3DE6DF00D70746 /* XCRemoteSwiftPackageReference "LookinServer" */,
+				751C46DE2E3DF6DE00D70746 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 75E220E22E23975700080D8D /* Products */;
@@ -303,7 +317,6 @@
 				INFOPLIST_FILE = attandanceApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -331,7 +344,6 @@
 				INFOPLIST_FILE = attandanceApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -580,6 +592,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		751C46D92E3DE6DF00D70746 /* XCRemoteSwiftPackageReference "LookinServer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QMUI/LookinServer/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.8;
+			};
+		};
+		751C46DE2E3DF6DE00D70746 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.9.0;
+			};
+		};
 		75E221272E23999100080D8D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -591,6 +619,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		751C46DA2E3DE6DF00D70746 /* LookinServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 751C46D92E3DE6DF00D70746 /* XCRemoteSwiftPackageReference "LookinServer" */;
+			productName = LookinServer;
+		};
+		751C46DF2E3DF6DE00D70746 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 751C46DE2E3DF6DE00D70746 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		751C46E12E3DF6DE00D70746 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 751C46DE2E3DF6DE00D70746 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		751C46E32E3DF6DE00D70746 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 751C46DE2E3DF6DE00D70746 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		75E221282E23999100080D8D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 75E221272E23999100080D8D /* XCRemoteSwiftPackageReference "SnapKit" */;
